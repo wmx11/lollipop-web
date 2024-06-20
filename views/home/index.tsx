@@ -1,21 +1,21 @@
-import React from "react";
-import Hero from "./sections/hero";
 import AboutUs from "./sections/about-us";
 import Features from "./sections/features";
-import Tokenomics from "./sections/tokenomics";
+import Hero from "./sections/hero";
 import HowToBuy from "./sections/how-to-buy";
+import SocialMedia from "./sections/social-media";
 import Team from "./sections/team";
+import Tokenomics from "./sections/tokenomics";
 
 const HomeView = () => {
   return (
     <>
       <Hero />
-      <AboutUs />
       <Features />
-      <Tokenomics />
+      <AboutUs />
       <HowToBuy />
+      <Tokenomics />
       <Team />
-      <div>Connect with us (socials)</div>
+      <SocialMedia />
     </>
   );
 };
