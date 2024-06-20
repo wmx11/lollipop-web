@@ -40,4 +40,12 @@ const Title: FC<Props> = ({ order = 1, children, className, ...props }) => {
   }
 };
 
+interface TitleGroupProps extends ComponentPropsWithoutRef<"div"> {}
+
+export const TitleGroup: FC<TitleGroupProps> = (props) => {
+  return (
+    <div {...props} className={cn("mb-8 space-y-2", props.className)}></div>
+  );
+};
+
 export default Title;
