@@ -1,2 +1,4 @@
+export HUSKY=0
 pnpm lint
 pnpm tsc --noEmit
+unset HUSKY

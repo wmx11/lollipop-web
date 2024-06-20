@@ -10,7 +10,24 @@ interface Menu {
   };
 }
 
-const menuLinks: Menu[] = [];
+const menuLinks: Menu[] = [
+  {
+    label: "About",
+    href: "",
+  },
+  {
+    label: "Features",
+    href: "",
+  },
+  {
+    label: "Tokenomics",
+    href: "",
+  },
+  {
+    label: "How to buy",
+    href: "",
+  },
+];
 
 const footerMenuLinks: Menu[] = [];
 
