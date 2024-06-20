@@ -20,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      maxWidth: {
+        content: "650px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

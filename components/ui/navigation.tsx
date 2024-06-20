@@ -27,6 +27,10 @@ const menuLinks: Menu[] = [
     label: "How to buy",
     href: "",
   },
+  {
+    label: "Team",
+    href: "",
+  },
 ];
 
 const footerMenuLinks: Menu[] = [];

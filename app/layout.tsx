@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
 import Footer from "@/components/ui/footer";
 import HeaderNavigation from "@/components/ui/header-navigation";
+import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { Balsamiq_Sans as FontSans } from "next/font/google";
+import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "700"],
 });
 export const metadata: Metadata = {
   title: {
@@ -30,11 +33,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <header className="sticky top-0 z-50">
-          <HeaderNavigation />
-        </header>
-        <main>{children}</main>
-        <Footer />
+        <TooltipProvider delayDuration={300}>
+          <header className="fixed w-full top-0 z-50">
+            <HeaderNavigation />
+          </header>
+          <main>{children}</main>
+          <Footer />
+          <Toaster richColors />
+        </TooltipProvider>
       </body>
     </html>
   );
