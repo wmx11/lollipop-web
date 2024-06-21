@@ -91,17 +91,17 @@
   }
 
   .mesh-gradient {
-    background-color: #c9ff99;
+    background-color: #ffc799;
     background-image: radial-gradient(
-        at 87% 87%,
-        hsla(236, 80%, 71%, 1) 0px,
+        at 44% 89%,
+        hsla(4, 84%, 61%, 1) 0px,
         transparent 50%
       ),
-      radial-gradient(at 11% 29%, hsla(12, 80%, 79%, 1) 0px, transparent 50%),
-      radial-gradient(at 9% 67%, hsla(52, 64%, 73%, 1) 0px, transparent 50%),
-      radial-gradient(at 37% 90%, hsla(0, 84%, 79%, 1) 0px, transparent 50%),
-      radial-gradient(at 86% 53%, hsla(50, 80%, 68%, 1) 0px, transparent 50%),
-      radial-gradient(at 77% 87%, hsla(246, 60%, 68%, 1) 0px, transparent 50%),
-      radial-gradient(at 91% 63%, hsla(340, 99%, 76%, 1) 0px, transparent 50%);
+      radial-gradient(at 53% 83%, hsla(343, 78%, 78%, 1) 0px, transparent 50%),
+      radial-gradient(at 20% 29%, hsla(293, 87%, 73%, 1) 0px, transparent 50%),
+      radial-gradient(at 41% 68%, hsla(241, 87%, 69%, 1) 0px, transparent 50%),
+      radial-gradient(at 54% 73%, hsla(161, 85%, 72%, 1) 0px, transparent 50%),
+      radial-gradient(at 49% 50%, hsla(11, 99%, 73%, 1) 0px, transparent 50%),
+      radial-gradient(at 45% 82%, hsla(345, 76%, 76%, 1) 0px, transparent 50%);
   }
 }

@@ -13,27 +13,40 @@ interface Menu {
 const menuLinks: Menu[] = [
   {
     label: "About",
-    href: "",
+    href: "#about",
   },
   {
     label: "Features",
-    href: "",
+    href: "#features",
   },
   {
     label: "Tokenomics",
-    href: "",
+    href: "#tokenomics",
   },
   {
     label: "How to buy",
-    href: "",
+    href: "#how-to-buy",
   },
   {
     label: "Team",
-    href: "",
+    href: "#team",
   },
 ];
 
-const footerMenuLinks: Menu[] = [];
+const footerMenuLinks: Menu[] = [
+  {
+    group: {
+      label: "Lollipop",
+      items: menuLinks,
+    },
+  },
+  {
+    group: {
+      label: "Legal",
+      items: [],
+    },
+  },
+];
 
 export const renderMenuLinks = () => {
   return menuLinks.map((item, index) => (

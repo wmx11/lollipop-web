@@ -7,7 +7,7 @@ import { socialLinks } from "@/lib/social-links";
 
 const SocialMedia = () => {
   return (
-    <Section className="bg-pattern">
+    <Section className="bg-pattern" id="social-media">
       <Container>
         <TitleGroup className="text-center">
           <Title>Join our community</Title>

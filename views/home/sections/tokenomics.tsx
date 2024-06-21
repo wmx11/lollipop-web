@@ -49,7 +49,7 @@ const content = [
 
 const Tokenomics = () => {
   return (
-    <Section className="">
+    <Section id="tokenomics">
       <Container>
         <div className="mb-8">
           <Title>Tokenomics</Title>

@@ -33,9 +33,9 @@ const team = [
 
 const Team = () => {
   return (
-    <Section className="mesh-gradient relative ">
+    <Section className="mesh-gradient relative" id="team">
       <div className="bg-pattern absolute inset-0 pointer-events-none"></div>
-      <Container className="relative z-10">
+      <Container className="relative z-10 text-white">
         <TitleGroup className="text-center">
           <Title>The Dogfathers</Title>
           <Title order={2} className="max-w-content mx-auto">

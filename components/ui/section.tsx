@@ -5,7 +5,9 @@ interface Props extends ComponentPropsWithoutRef<"section"> {}
 
 const Section: FC<Props> = (props) => {
   return (
-    <section className={cn("py-32", props.className)}>{props.children}</section>
+    <section {...props} className={cn("py-32", props.className)}>
+      {props.children}
+    </section>
   );
 };
 
