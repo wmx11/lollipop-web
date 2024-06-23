@@ -17,10 +17,10 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <Section className="min-h-screen bg-pattern flex items-center">
-      <Container className="grid grid-cols-1 md:grid-cols-[1fr,500px] gap-8 relative items-center">
+      <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 relative items-center">
         <div>
           <TitleGroup className="space-y-4">
-            <Title className="text-8xl font-black">
+            <Title className="text-6xl md:text-8xl font-black">
               Lolli
               <strong className="text-primary uppercase relative">
                 <span className="z-10">pop</span>
@@ -52,7 +52,7 @@ const Hero = () => {
 
             <Badge variant="outline">
               <ReceiptText className="w-3 h-3 mr-3" />
-              <span className="uppercase text-lg">
+              <span className="uppercase text-lg break-all">
                 {config.contractAddress}
               </span>
               <ClipboardButton className="ml-3" copy={config.contractAddress} />
@@ -80,7 +80,6 @@ const Hero = () => {
               alt="Swirl image"
               className="absolute top-0 left-[-15px] w-16"
             />
-            <div className="w-[400px] h-[400px] rounded-full bg-accent blur-[20px] opacity-50 absolute z-0"></div>
           </div>
         </div>
       </Container>

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
-import Title from "@/components/ui/title";
+import Title, { TitleGroup } from "@/components/ui/title";
 import React from "react";
 
 const content = [
@@ -22,7 +22,7 @@ const content = [
     value: "800M",
   },
   {
-    title: "Liquidity Pool",
+    title: "Liquidity pool",
     value: "13,716,697",
   },
   {
@@ -34,11 +34,11 @@ const content = [
     value: "100,000,000",
   },
   {
-    title: "Team",
+    title: "Team allocation",
     value: "60,000,000",
   },
   {
-    title: "Seed Sale",
+    title: "Seed sale",
     value: "40,000,000",
   },
   {
@@ -51,9 +51,10 @@ const Tokenomics = () => {
   return (
     <Section id="tokenomics">
       <Container>
-        <div className="mb-8">
+        <TitleGroup>
           <Title>Tokenomics</Title>
-        </div>
+          <Title order={2}>Everything about Lollipop "Barkonomics"</Title>
+        </TitleGroup>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {content.map((item, index) => (

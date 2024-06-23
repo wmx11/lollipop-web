@@ -44,7 +44,7 @@ const Team = () => {
           </Title>
         </TitleGroup>
 
-        <div className="flex flex-wrap justify-between items-center gap-4">
+        <div className="flex flex-wrap justify-center md:justify-between items-center gap-4">
           {team.map((item, index) => (
             <div
               className="flex items-center flex-col gap-4"
