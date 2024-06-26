@@ -1,19 +1,23 @@
-import { Button } from "@/components/ui/button";
+import LollipopDog from "@/assets/lollipop-dog-2.svg";
+import NFTsDogImage from "@/assets/nfts_dog.png";
+import PlayDogImage from "@/assets/play_dog.png";
+import StarsImage from "@/assets/stars.png";
+import SwapDogImage from "@/assets/swap_dog.png";
+import TaxDogImage from "@/assets/tax_dog.png";
+import AvatarWithTooltipLink from "@/components/ui/avatar-with-tooltip-link";
+import CTAButton from "@/components/ui/call-to-action-button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
+import { socialLinks } from "@/lib/social-links";
 import clsx from "clsx";
 import Image from "next/image";
-import StarsImage from "@/assets/stars.png";
-import LollipopDog from "@/assets/lollipop-dog-2.svg";
-import { socialLinks } from "@/lib/social-links";
-import AvatarWithTooltipLink from "@/components/ui/avatar-with-tooltip-link";
-import CTAButton from "@/components/ui/call-to-action-button";
 
 const features = [
   {
     title: "NFT treats",
+    image: NFTsDogImage,
     description: (
       <p>
         Lollipop NFTs offer weekly payouts for our loyal pups! Find out more and
@@ -23,6 +27,7 @@ const features = [
   },
   {
     title: "Lollipop swap",
+    image: SwapDogImage,
     description: (
       <p>
         Snatch your Lollipop tokens on our Lollipop swap! Join the rest of the
@@ -32,6 +37,7 @@ const features = [
   },
   {
     title: "Lollipop taxes",
+    image: TaxDogImage,
     description: (
       <p>
         A small 2% buy fee and 3% sell fee are collected to feed Lollipop
@@ -41,6 +47,7 @@ const features = [
   },
   {
     title: "Lollipop rush",
+    image: PlayDogImage,
     description: (
       <p>
         Compete against other pups and win prizes! All revenue goes back into
@@ -70,17 +77,23 @@ const Features = () => {
             <Card
               key={`feature_${index}`}
               className={clsx(
-                "relative overflow-clip  hover:scale-[1.02] transition-transform",
+                "relative overflow-clip  hover:scale-[1.02] transition-transform p-0",
                 index % 2 ? "hover:rotate-2" : "hover:-rotate-2"
               )}
             >
-              <CardContent>
-                <div className="min-h-[320px]"></div>
-                <div className="z-10 space-y-4 relative">
+              <CardContent className="p-0 h-full">
+                <div className="min-h-[320px]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="z-20 space-y-4 relative bg-white [mask-image:linear-gradient(transparent,black_3%)] h-full pt-6 px-4 pb-4">
                   <CardTitle>{item.title}</CardTitle>
                   <div>{item.description}</div>
                 </div>
-                <div className="absolute inset-0 w-full h-full"></div>
               </CardContent>
             </Card>
           ))}

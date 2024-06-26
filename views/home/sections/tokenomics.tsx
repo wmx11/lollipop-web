@@ -4,6 +4,8 @@ import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
 import React from "react";
+import Image from "next/image";
+import BarkonomicsImage from "@/assets/barkonomics.png";
 
 const content = [
   {
@@ -57,7 +59,6 @@ const Tokenomics = () => {
           <Title order={2}>Everything about Lollipop "Barkonomics"</Title>
         </TitleGroup>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {content.map((item, index) => (
               <Card key={`tokenomics_${index}`}>
@@ -69,6 +70,9 @@ const Tokenomics = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="self-end">
+            <Image src={BarkonomicsImage} alt="Lollipop tokenomics" />
           </div>
         </div>
       </Container>
