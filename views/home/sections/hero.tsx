@@ -22,7 +22,7 @@ const Hero = () => {
           <TitleGroup className="space-y-4">
             <Title className="text-6xl md:text-8xl font-black">
               Lolli
-              <strong className="text-primary uppercase relative">
+              <strong className="text-primary uppercase relative rotate-12 inline-block">
                 <span className="z-10">pop</span>
                 <Image
                   src={PopImage}

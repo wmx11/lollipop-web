@@ -42,8 +42,36 @@ const footerMenuLinks: Menu[] = [
   },
   {
     group: {
+      label: "Lollipop games",
+      items: [
+        {
+          label: "Lollipop rush",
+          href: "#",
+        },
+      ],
+    },
+  },
+  {
+    group: {
       label: "Legal",
-      items: [],
+      items: [
+        {
+          label: "Privacy policy",
+          href: "#",
+        },
+        {
+          label: "Terms of services",
+          href: "#",
+        },
+        {
+          label: "Cookie policy",
+          href: "#",
+        },
+        {
+          label: "Disclaimer",
+          href: "#",
+        },
+      ],
     },
   },
 ];

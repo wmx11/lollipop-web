@@ -32,13 +32,13 @@ export const marketLinks = [
 export const socialLinks = [
   {
     href: "#",
-    image: DiscordLogo.src,
-    tooltip: "Discord",
+    image: TelegramLogo.src,
+    tooltip: "Telegram",
   },
   {
     href: "#",
-    image: TelegramLogo.src,
-    tooltip: "Telegram",
+    image: DiscordLogo.src,
+    tooltip: "Discord",
   },
   {
     href: "#",

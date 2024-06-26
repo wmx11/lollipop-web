@@ -6,12 +6,13 @@ import Title, { TitleGroup } from "@/components/ui/title";
 const AboutUs = () => {
   return (
     <Section id="about">
-      <Container className="text-center">
+      <Container>
         <TitleGroup>
-          <Title>About Lollipop</Title>
+          <Title>Lollipop Finance</Title>
         </TitleGroup>
+        <div></div>
         <div className="space-y-4">
-          <p className="mx-auto max-w-content">
+          <p className="">
             Lollipop is more than just a token. We're building a space where the
             core is community. We believe that DeFi can be easy, democratized,
             transparent, and most importantly - fun. Too many bad actors,
