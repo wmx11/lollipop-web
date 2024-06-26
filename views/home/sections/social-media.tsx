@@ -4,13 +4,23 @@ import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
 import { socialLinks } from "@/lib/social-links";
+import Image from "next/image";
+import ChatImage from "@/assets/chat.png";
 
 const SocialMedia = () => {
   return (
     <Section className="bg-pattern" id="social-media">
       <Container>
         <TitleGroup className="text-center">
-          <Title>Join our community</Title>
+          <div className="flex gap-2 items-center justify-center">
+            <Title>Join our community</Title>
+            <Image
+              src={ChatImage}
+              alt="Chat image"
+              width={40}
+              className="pointer-events-none"
+            />
+          </div>
           <Title order={2} className="max-w-content mx-auto">
             Become a part of a community full of like-minded people on a mission
             to make DeFi fun and transparent!

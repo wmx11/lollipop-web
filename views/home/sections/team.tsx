@@ -59,7 +59,7 @@ const Team = () => {
                   <span>{item.name}</span>
                   <PawPrint />
                 </div>
-                <div className="">{item.title}</div>
+                <div>{item.title}</div>
               </div>
             </div>
           ))}

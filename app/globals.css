@@ -104,4 +104,19 @@
       radial-gradient(at 49% 50%, hsla(11, 99%, 73%, 1) 0px, transparent 50%),
       radial-gradient(at 45% 82%, hsla(345, 76%, 76%, 1) 0px, transparent 50%);
   }
+
+  .mesh-gradient-2 {
+    background-color: #ff99c5;
+    background-image: radial-gradient(
+        at 15% 2%,
+        hsla(251, 60%, 73%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 96% 89%, hsla(322, 98%, 70%, 1) 0px, transparent 50%),
+      radial-gradient(at 60% 34%, hsla(304, 75%, 61%, 1) 0px, transparent 50%),
+      radial-gradient(at 14% 14%, hsla(231, 77%, 68%, 1) 0px, transparent 50%),
+      radial-gradient(at 29% 49%, hsla(19, 97%, 79%, 1) 0px, transparent 50%),
+      radial-gradient(at 2% 0%, hsla(52, 90%, 65%, 1) 0px, transparent 50%),
+      radial-gradient(at 78% 50%, hsla(117, 91%, 66%, 1) 0px, transparent 50%);
+  }
 }

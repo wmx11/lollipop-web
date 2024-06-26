@@ -1,8 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
+import MoneyImage from "@/assets/money.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
 import config from "@/lib/config";
+import clsx from "clsx";
+import Image from "next/image";
 
 const howToBuy = [
   {
@@ -79,14 +83,18 @@ const howToBuy = [
 
 const HowToBuy = () => {
   return (
-    <Section id="how-to-buy">
+    <Section id="how-to-buy" className="mesh-gradient-2 relative">
+      <div className="bg-pattern absolute inset-0 pointer-events-none"></div>
       <Container>
-        <TitleGroup>
+        <TitleGroup className="text-white z-10 relative">
           <Title>How to get Lollipop</Title>
         </TitleGroup>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {howToBuy.map((item, index) => (
-            <Card>
+            <Card
+              key={`how_to_buy_${index}`}
+              className={clsx(index % 2 ? "-rotate-1" : "rotate-1")}
+            >
               <CardHeader>
                 <CardTitle>
                   {index + 1}
@@ -97,6 +105,14 @@ const HowToBuy = () => {
               <CardContent>{item.description}</CardContent>
             </Card>
           ))}
+          <div className="self-center mx-auto">
+            <Image
+              src={MoneyImage}
+              alt="Money image"
+              width={150}
+              className="pointer-events-none"
+            />
+          </div>
         </div>
       </Container>
     </Section>

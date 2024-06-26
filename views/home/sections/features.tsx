@@ -4,6 +4,12 @@ import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
 import clsx from "clsx";
+import Image from "next/image";
+import StarsImage from "@/assets/stars.png";
+import LollipopDog from "@/assets/lollipop-dog-2.svg";
+import { socialLinks } from "@/lib/social-links";
+import AvatarWithTooltipLink from "@/components/ui/avatar-with-tooltip-link";
+import CTAButton from "@/components/ui/call-to-action-button";
 
 const features = [
   {
@@ -49,9 +55,15 @@ const Features = () => {
   return (
     <Section id="features">
       <Container>
-        <TitleGroup>
+        <TitleGroup className="relative">
           <Title>Lollipop features</Title>
           <Title order={2}>Explore some ouf our tail-wagging features!</Title>
+          <Image
+            src={StarsImage}
+            alt="Stars image"
+            width={100}
+            className="absolute top-0 right-0 pointer-events-none rotate-12"
+          />
         </TitleGroup>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map((item, index) => (
@@ -68,13 +80,30 @@ const Features = () => {
                   <CardTitle>{item.title}</CardTitle>
                   <div>{item.description}</div>
                 </div>
-                <div className="absolute bg-red-200 inset-0 w-full h-full"></div>
+                <div className="absolute inset-0 w-full h-full"></div>
               </CardContent>
             </Card>
           ))}
-          <Card className="md:col-span-2">
-            <CardContent>
-              <Title order={2}>More features are coming!</Title>
+          <Card className="md:col-span-2 bg-pattern border-primary">
+            <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 pb-0">
+              <div className="space-y-2">
+                <Title order={2}>
+                  Become part of the Lollipop community and get the latest
+                  updates!
+                </Title>
+                <div className="flex flex-wrap gap-4 w-full">
+                  {socialLinks.map((props, index) => (
+                    <AvatarWithTooltipLink
+                      {...props}
+                      key={`social_link_card_${index}`}
+                    />
+                  ))}
+                  <CTAButton size="sm" />
+                </div>
+              </div>
+              <div className="blob">
+                <Image src={LollipopDog} alt="Lollipop dog" />
+              </div>
             </CardContent>
           </Card>
         </div>
