@@ -1,3 +1,4 @@
+"use client";
 import MikeImage from "@/assets/mike.svg";
 import NismoImage from "@/assets/nismo.svg";
 import SamImage from "@/assets/sam.svg";
@@ -5,6 +6,8 @@ import ScottImage from "@/assets/scott.svg";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
+import { popInVariant } from "@/lib/animation-variants";
+import { motion } from "framer-motion";
 import { PawPrint } from "lucide-react";
 import Image from "next/image";
 
@@ -46,9 +49,14 @@ const Team = () => {
 
         <div className="flex flex-wrap justify-center md:justify-between items-center gap-4">
           {team.map((item, index) => (
-            <div
-              className="flex items-center flex-col gap-4"
+            <motion.div
               key={`team_${index}`}
+              className="flex items-center flex-col gap-4"
+              initial="initial"
+              whileInView="visible"
+              custom={index}
+              viewport={{ once: true }}
+              variants={popInVariant}
             >
               <div>
                 <Image src={item.image} alt={`${item.name} image`} />
@@ -61,7 +69,7 @@ const Team = () => {
                 </div>
                 <div>{item.title}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </Container>

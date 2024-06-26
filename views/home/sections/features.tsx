@@ -1,3 +1,4 @@
+"use client";
 import LollipopDog from "@/assets/lollipop-dog-2.svg";
 import NFTsDogImage from "@/assets/nfts_dog.png";
 import PlayDogImage from "@/assets/play_dog.png";
@@ -10,8 +11,10 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
+import { popInVariant } from "@/lib/animation-variants";
 import { socialLinks } from "@/lib/social-links";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const features = [
@@ -74,28 +77,37 @@ const Features = () => {
         </TitleGroup>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map((item, index) => (
-            <Card
+            <motion.div
+              className="h-full"
               key={`feature_${index}`}
-              className={clsx(
-                "relative overflow-clip  hover:scale-[1.02] transition-transform p-0",
-                index % 2 ? "hover:rotate-2" : "hover:-rotate-2"
-              )}
+              initial="initial"
+              whileInView="visible"
+              custom={index}
+              viewport={{ once: true }}
+              variants={popInVariant}
             >
-              <CardContent className="p-0 h-full">
-                <div className="min-h-[320px]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="z-20 space-y-4 relative bg-white [mask-image:linear-gradient(transparent,black_3%)] h-full pt-6 px-4 pb-4">
-                  <CardTitle>{item.title}</CardTitle>
-                  <div>{item.description}</div>
-                </div>
-              </CardContent>
-            </Card>
+              <Card
+                className={clsx(
+                  "relative overflow-clip  hover:scale-[1.02] transition-transform p-0 h-full",
+                  index % 2 ? "hover:rotate-2" : "hover:-rotate-2"
+                )}
+              >
+                <CardContent className="p-0 h-full">
+                  <div className="min-h-[320px]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="z-20 space-y-4 relative bg-white [mask-image:linear-gradient(transparent,black_3%)] h-full pt-6 px-4 pb-4">
+                    <CardTitle>{item.title}</CardTitle>
+                    <div>{item.description}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
           <Card className="md:col-span-2 bg-pattern border-primary">
             <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 pb-0">

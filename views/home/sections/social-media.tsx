@@ -1,18 +1,27 @@
+"use client";
+import ChatImage from "@/assets/chat.png";
 import AvatarWithTooltipLink from "@/components/ui/avatar-with-tooltip-link";
 import CTAButton from "@/components/ui/call-to-action-button";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
+import { popInVariant } from "@/lib/animation-variants";
 import { socialLinks } from "@/lib/social-links";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import ChatImage from "@/assets/chat.png";
 
 const SocialMedia = () => {
   return (
     <Section className="bg-pattern" id="social-media">
       <Container>
         <TitleGroup className="text-center">
-          <div className="flex gap-2 items-center justify-center">
+          <motion.div
+            className="flex gap-2 items-center justify-center"
+            initial="initial"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={popInVariant}
+          >
             <Title>Join our community</Title>
             <Image
               src={ChatImage}
@@ -20,7 +29,7 @@ const SocialMedia = () => {
               width={40}
               className="pointer-events-none"
             />
-          </div>
+          </motion.div>
           <Title order={2} className="max-w-content mx-auto">
             Become a part of a community full of like-minded people on a mission
             to make DeFi fun and transparent!

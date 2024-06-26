@@ -1,3 +1,4 @@
+"use client";
 import ClickArrowImage from "@/assets/click-arrow.png";
 import LollipopDog from "@/assets/lollipop-dog.webp";
 import PopImage from "@/assets/pop.png";
@@ -9,8 +10,10 @@ import ClipboardButton from "@/components/ui/clipboard-button";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
+import { popInVariant } from "@/lib/animation-variants";
 import config from "@/lib/config";
 import { marketLinks, socialLinks } from "@/lib/social-links";
+import { motion } from "framer-motion";
 import { ReceiptText } from "lucide-react";
 import Image from "next/image";
 
@@ -22,14 +25,20 @@ const Hero = () => {
           <TitleGroup className="space-y-4">
             <Title className="text-6xl md:text-8xl font-black">
               Lolli
-              <strong className="text-primary uppercase relative rotate-12 inline-block">
+              <motion.strong
+                className="text-primary uppercase relative rotate-12 inline-block"
+                initial="initial"
+                whileInView="visibleRotate"
+                viewport={{ once: true }}
+                variants={popInVariant}
+              >
                 <span className="z-10">pop</span>
                 <Image
                   src={PopImage}
                   alt="pop image"
                   className="absolute top-[-10px] right-[-10px] w-12"
                 />
-              </strong>{" "}
+              </motion.strong>{" "}
               Finance
             </Title>
 

@@ -1,11 +1,14 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 import MoneyImage from "@/assets/money.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title, { TitleGroup } from "@/components/ui/title";
+import { popInVariant } from "@/lib/animation-variants";
 import config from "@/lib/config";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const howToBuy = [
@@ -91,19 +94,28 @@ const HowToBuy = () => {
         </TitleGroup>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {howToBuy.map((item, index) => (
-            <Card
+            <motion.div
               key={`how_to_buy_${index}`}
-              className={clsx(index % 2 ? "-rotate-1" : "rotate-1")}
+              className="h-full"
+              initial="initial"
+              whileInView="visible"
+              custom={index}
+              viewport={{ once: true }}
+              variants={popInVariant}
             >
-              <CardHeader>
-                <CardTitle>
-                  {index + 1}
-                  {". "}
-                  {item.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>{item.description}</CardContent>
-            </Card>
+              <Card
+                className={clsx(index % 2 ? "-rotate-1" : "rotate-1", "h-full")}
+              >
+                <CardHeader>
+                  <CardTitle>
+                    {index + 1}
+                    {". "}
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>{item.description}</CardContent>
+              </Card>
+            </motion.div>
           ))}
           <div className="self-center mx-auto">
             <Image
