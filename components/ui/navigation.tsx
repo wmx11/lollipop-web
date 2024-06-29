@@ -45,7 +45,7 @@ const footerMenuLinks: Menu[] = [
       label: "Lollipop games",
       items: [
         {
-          label: "Lollipop rush",
+          label: "Lollipop Rush",
           href: "#",
         },
       ],

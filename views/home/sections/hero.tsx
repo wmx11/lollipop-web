@@ -26,13 +26,13 @@ const Hero = () => {
             <Title className="text-6xl md:text-8xl font-black">
               Lolli
               <motion.strong
-                className="text-primary uppercase relative rotate-12 inline-block"
+                className="text-primary uppercase relative rotate-12 inline-block "
                 initial="initial"
                 whileInView="visibleRotate"
                 viewport={{ once: true }}
                 variants={popInVariant}
               >
-                <span className="z-10">pop</span>
+                <span className="z-10 text-[100px] md:text-[130px]">pop</span>
                 <Image
                   src={PopImage}
                   alt="pop image"
@@ -43,20 +43,9 @@ const Hero = () => {
             </Title>
 
             <Title order={2} className="max-w-content !mb-4">
-              Helping you navigate the risky waters of DeFi! <br />
-              Lollipop is building a community where crypto meets{" "}
-              <span className="decoration-wavy underline decoration-primary">
-                sophistication
-              </span>
-              {", "}
-              <span className="decoration-wavy underline decoration-primary">
-                transparency
-              </span>
-              {", "}
-              and{" "}
-              <span className="decoration-wavy underline decoration-primary">
-                fun!
-              </span>
+              Simplifying and sweetening your crypto journey! <br />
+              Lollipop is cultivating a community, demystifying DeFi and
+              delivering delight.
             </Title>
 
             <Badge variant="outline">

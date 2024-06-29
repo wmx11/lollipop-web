@@ -5,6 +5,7 @@ import DiscordLogo from "@/assets/logos/discord.webp";
 import PancakeSwapLogo from "@/assets/logos/pancakeswap.webp";
 import TelegramLogo from "@/assets/logos/telegram.webp";
 import TwitterLogo from "@/assets/logos/twitter.webp";
+import RedditLogo from "@/assets/logos/reddit.webp";
 
 export const marketLinks = [
   {
@@ -44,5 +45,10 @@ export const socialLinks = [
     href: "#",
     image: TwitterLogo.src,
     tooltip: "Twitter",
+  },
+  {
+    href: "#",
+    image: RedditLogo.src,
+    tooltip: "Reddit",
   },
 ];
