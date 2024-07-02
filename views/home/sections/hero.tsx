@@ -30,24 +30,24 @@ const Hero = () => {
       <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 relative items-center">
         <div>
           <TitleGroup className="space-y-4">
-            <Title className="text-6xl md:text-8xl font-black">
-              <span className={font.className}>
-                Lolli
-                <motion.strong
-                  className="text-primary uppercase relative rotate-12 inline-block "
-                  initial="initial"
-                  whileInView="visibleRotate"
-                  viewport={{ once: true }}
-                  variants={popInVariant}
-                >
-                  <span className="z-10 text-[100px] md:text-[130px]">pop!</span>
-                  <Image
-                    src={PopImage}
-                    alt="pop image"
-                    className="absolute top-[-10px] right-[-10px] w-12"
-                  />
-                </motion.strong>{" "}
-              </span>
+            <Title
+              className={`text-6xl md:text-8xl font-black ${font.className}`}
+            >
+              Lolli
+              <motion.strong
+                className="text-primary uppercase relative rotate-12 inline-block "
+                initial="initial"
+                whileInView="visibleRotate"
+                viewport={{ once: true }}
+                variants={popInVariant}
+              >
+                <span className="z-10 text-[100px] md:text-[130px]">pop!</span>
+                <Image
+                  src={PopImage}
+                  alt="pop image"
+                  className="absolute top-[-10px] right-[-10px] w-12"
+                />
+              </motion.strong>{" "}
               Finance
             </Title>
 

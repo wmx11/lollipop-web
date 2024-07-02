@@ -16,18 +16,17 @@ const SocialMedia = () => {
       <Container>
         <TitleGroup className="text-center">
           <motion.div
-            className="flex gap-2 items-center justify-center"
             initial="initial"
             whileInView="visible"
             viewport={{ once: true }}
             variants={popInVariant}
           >
-            <Title>Join our community</Title>
+            <Title className="inline">Join our community</Title>
             <Image
               src={ChatImage}
               alt="Chat image"
               width={40}
-              className="pointer-events-none"
+              className="pointer-events-none inline -translate-y-1"
             />
           </motion.div>
           <Title order={2} className="max-w-content mx-auto">

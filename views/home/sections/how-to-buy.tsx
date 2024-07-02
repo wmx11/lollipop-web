@@ -23,7 +23,6 @@ const howToBuy = [
         and set up your Metamask wallet.
       </p>
     ),
-    className: "md:col-span-2",
   },
   {
     title: "Add BNB network",
@@ -41,6 +40,7 @@ const howToBuy = [
         .
       </p>
     ),
+    className: "md:col-span-2",
   },
   {
     title: "Get some BNB tokens",

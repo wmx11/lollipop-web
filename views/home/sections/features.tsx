@@ -19,7 +19,7 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "NFT treats",
+    title: "NFT treats (Coming Soon)",
     image: NFTsDogImage,
     description: (
       <p>
@@ -29,7 +29,7 @@ const features = [
     ),
   },
   {
-    title: "Lollipop swap",
+    title: "Lollipop swap (Coming Soon)",
     image: SwapDogImage,
     description: (
       <p>
@@ -43,7 +43,7 @@ const features = [
     image: TaxDogImage,
     description: (
       <p>
-        A small 2% buy fee and 3% sell fee are collected to feed Lollipop
+        A small 3% buy fee and 5% sell fee are collected to feed Lollipop
         kibbles and help it grow, fund development, marketing, and staff.
       </p>
     ),
@@ -110,7 +110,7 @@ const Features = () => {
             </motion.div>
           ))}
           <Card className="md:col-span-2 bg-pattern border-primary">
-            <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 pb-0">
+            <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 p-4">
               <div className="space-y-2">
                 <Title order={2}>
                   Become part of the Lollipop community and get the latest
@@ -126,7 +126,7 @@ const Features = () => {
                   <CTAButton size="sm" />
                 </div>
               </div>
-              <div className="blob">
+              <div className="blob max-w-[500px]">
                 <Image src={LollipopDog} alt="Lollipop dog" />
               </div>
             </CardContent>

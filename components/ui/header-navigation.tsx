@@ -1,16 +1,16 @@
 "use client";
 import { MOBILE_BREAKPOINT } from "@/lib/constants";
+import clsx from "clsx";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { MenuIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import CTAButton from "./call-to-action-button";
 import Container from "./container";
 import { renderMenuLinks } from "./navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
-import { cn } from "@/lib/utils";
-import clsx from "clsx";
+import AvatarWithTooltipLink from "./avatar-with-tooltip-link";
+import { socialLinks } from "@/lib/social-links";
 
 const DesktopNavigation = () => {
   const { scrollY } = useScroll();
@@ -86,6 +86,16 @@ const MobileNavigation = () => {
               {renderMenuLinks()}
               <li className="border-t pt-2 [&>a]:w-full">
                 <CTAButton size="sm" className="rounded-full w-full" />
+              </li>
+              <li className="border-t pt-2">
+                <div className="flex flex-wrap gap-4 w-full justify-center">
+                  {socialLinks.map((props, index) => (
+                    <AvatarWithTooltipLink
+                      {...props}
+                      key={`social_link_menu_${index}`}
+                    />
+                  ))}
+                </div>
               </li>
             </ul>
           </div>

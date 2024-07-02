@@ -11,9 +11,10 @@ const content = [
   {
     title: "Token name",
     value: "Lollipop",
+    className: "md:col-span-2",
   },
   {
-    title: "Symbol",
+    title: "Ticker",
     value: "LOLLY",
   },
   {
@@ -21,32 +22,37 @@ const content = [
     value: "Binance Smart Chain",
   },
   {
+    title: "Taxes",
+    value: "3% Buy tax / 5% Sell tax (Adjustable up to 10%)",
+  },
+  {
     title: "Total supply",
-    value: "800M",
+    value: "1 Billion",
   },
   {
-    title: "Liquidity pool",
-    value: "13,716,697",
+    title: "Circulating supply",
+    value: "250 Million",
   },
   {
-    title: "Burned",
-    value: "286,355,919",
+    title: "Development",
+    value: "100 Million (1.2M unlocked)",
   },
   {
-    title: "Marketing",
-    value: "100,000,000",
+    title: "Locked tokens",
+    value: "244.6 Million (Min 1 year until Phase 2)",
   },
   {
-    title: "Team allocation",
-    value: "60,000,000",
+    title: "Marketing & Community",
+    value: "250 Million (3M unlocked)",
   },
   {
-    title: "Seed sale",
-    value: "40,000,000",
+    title: "Team share",
+    value:
+      "150 Million (15M unlocked @ launch. 135M vested for 25 months, 5.4M unlocked monthly)",
   },
   {
-    title: "Locked",
-    value: "300,000,000",
+    title: "Consultants",
+    value: "12 Million (Vested until $5M MC) + 8.334M (Active)",
   },
 ];
 
@@ -61,7 +67,7 @@ const Tokenomics = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {content.map((item, index) => (
-              <Card key={`tokenomics_${index}`}>
+              <Card key={`tokenomics_${index}`} className={item?.className}>
                 <CardHeader>
                   <CardTitle>{item.title}</CardTitle>
                 </CardHeader>

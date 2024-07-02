@@ -74,7 +74,8 @@ const aboutUs = [
 
 const AboutUs = () => {
   return (
-    <Section className="bg-pattern relative overflow-clip" id="about">
+    <Section className="bg-pattern-bubbles relative overflow-clip" id="about">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <Container className="relative z-10">
         <TitleGroup className="relative z-10">
           <Title>Lollipop Finance</Title>
@@ -91,9 +92,10 @@ const AboutUs = () => {
               <CardContent className="grid grid-cols-1 sm:grid-cols-[130px,1fr] gap-8 justify-center items-center pb-0">
                 <div>
                   <Image
+                    width={130}
                     src={item.image}
                     alt={item.title}
-                    className="group-hover:-translate-y-2 group-hover:rotate-6 transition-transform"
+                    className="group-hover:-translate-y-2 group-hover:rotate-6 transition-transform max-w-[130px] w-full"
                   />
                 </div>
                 <div className="space-y-2">
