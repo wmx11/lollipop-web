@@ -87,8 +87,8 @@ const howToBuy = [
 const HowToBuy = () => {
   return (
     <Section id="how-to-buy" className="mesh-gradient-2 relative overflow-clip">
-      <div className="bg-pattern absolute inset-0 pointer-events-none"></div>
-      <Container>
+      <div className="bg-pattern-bubbles absolute inset-0 pointer-events-none"></div>
+      <Container className="relative">
         <TitleGroup className="text-white z-10 relative">
           <Title>How to get Lollipop</Title>
           <Title order={2}>Simple steps to get your tokens</Title>
@@ -117,13 +117,13 @@ const HowToBuy = () => {
             </motion.div>
           ))}
         </div>
+        <Image
+          src={DogHeadImage}
+          alt="Dog head"
+          width={280}
+          className="absolute top-[-140px] right-0 -rotate-12 z-0 opacity-50 md:opacity-100"
+        />
       </Container>
-      <Image
-        src={DogHeadImage}
-        alt="Dog head"
-        width={320}
-        className="absolute top-0 right-0 -rotate-12 z-0 opacity-50 md:opacity-100"
-      />
     </Section>
   );
 };

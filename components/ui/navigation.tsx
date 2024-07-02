@@ -93,7 +93,7 @@ export const renderFooterMenuLinks = () => {
           <ul>
             {item.group.items.map((groupItem, groupItemIndex) => (
               <li key={`footer_group_menu_${groupItemIndex}`}>
-                <NavigationLink href={groupItem.href} dark>
+                <NavigationLink href={groupItem.href}>
                   {groupItem.label}
                 </NavigationLink>
               </li>

@@ -76,13 +76,13 @@ const AboutUs = () => {
   return (
     <Section className="bg-pattern relative overflow-clip" id="about">
       <Container className="relative z-10">
-        <TitleGroup>
+        <TitleGroup className="relative z-10">
           <Title>Lollipop Finance</Title>
           <Title order={2}>
             How we simplify and sweeten your crypto journey
           </Title>
         </TitleGroup>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10">
           {aboutUs.map((item, index) => (
             <Card
               key={`about_us_${index}`}
@@ -104,13 +104,13 @@ const AboutUs = () => {
             </Card>
           ))}
         </div>
+        <Image
+          src={DogHeadImage}
+          alt="Dog head image"
+          width={280}
+          className="absolute top-[-150px] right-4 rotate-12 md:opacity-100 opacity-50 z-0"
+        />
       </Container>
-      <Image
-        src={DogHeadImage}
-        alt="Dog head image"
-        width={320}
-        className="absolute top-4 right-4 rotate-12 md:opacity-100 opacity-50 z-0"
-      />
     </Section>
   );
 };

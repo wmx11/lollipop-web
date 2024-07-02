@@ -6,25 +6,26 @@ import PancakeSwapLogo from "@/assets/logos/pancakeswap.webp";
 import TelegramLogo from "@/assets/logos/telegram.webp";
 import TwitterLogo from "@/assets/logos/twitter.webp";
 import RedditLogo from "@/assets/logos/reddit.webp";
+import config from "./config";
 
 export const marketLinks = [
   {
-    href: "#",
+    href: config.dexscreener,
     image: DexscreenerLogo.src,
     tooltip: "Dexscreener",
   },
   {
-    href: "#",
+    href: config.dextools,
     image: DextoolsLogo.src,
     tooltip: "Dextools",
   },
   {
-    href: "#",
+    href: config.coingecko,
     image: CoingeckoLogo.src,
     tooltip: "CoinGecko",
   },
   {
-    href: "#",
+    href: config.lollipopTokenSwapUrl,
     image: PancakeSwapLogo.src,
     tooltip: "PancakeSwap",
   },
@@ -32,22 +33,22 @@ export const marketLinks = [
 
 export const socialLinks = [
   {
-    href: "#",
+    href: config.telegram,
     image: TelegramLogo.src,
     tooltip: "Telegram",
   },
   {
-    href: "#",
+    href: config.discord,
     image: DiscordLogo.src,
     tooltip: "Discord",
   },
   {
-    href: "#",
+    href: config.twitter,
     image: TwitterLogo.src,
     tooltip: "Twitter",
   },
   {
-    href: "#",
+    href: config.reddit,
     image: RedditLogo.src,
     tooltip: "Reddit",
   },

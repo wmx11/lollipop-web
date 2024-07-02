@@ -12,7 +12,7 @@ import Image from "next/image";
 
 const SocialMedia = () => {
   return (
-    <Section className="bg-pattern" id="social-media">
+    <Section id="social-media">
       <Container>
         <TitleGroup className="text-center">
           <motion.div

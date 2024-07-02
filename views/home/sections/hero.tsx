@@ -16,29 +16,38 @@ import { marketLinks, socialLinks } from "@/lib/social-links";
 import { motion } from "framer-motion";
 import { ReceiptText } from "lucide-react";
 import Image from "next/image";
+import { Luckiest_Guy as Font } from "next/font/google";
+
+const font = Font({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const Hero = () => {
   return (
-    <Section className="min-h-screen bg-pattern flex items-center">
+    <Section className="min-h-screen bg-pattern-bubbles flex items-center">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 relative items-center">
         <div>
           <TitleGroup className="space-y-4">
             <Title className="text-6xl md:text-8xl font-black">
-              Lolli
-              <motion.strong
-                className="text-primary uppercase relative rotate-12 inline-block "
-                initial="initial"
-                whileInView="visibleRotate"
-                viewport={{ once: true }}
-                variants={popInVariant}
-              >
-                <span className="z-10 text-[100px] md:text-[130px]">pop</span>
-                <Image
-                  src={PopImage}
-                  alt="pop image"
-                  className="absolute top-[-10px] right-[-10px] w-12"
-                />
-              </motion.strong>{" "}
+              <span className={font.className}>
+                Lolli
+                <motion.strong
+                  className="text-primary uppercase relative rotate-12 inline-block "
+                  initial="initial"
+                  whileInView="visibleRotate"
+                  viewport={{ once: true }}
+                  variants={popInVariant}
+                >
+                  <span className="z-10 text-[100px] md:text-[130px]">pop!</span>
+                  <Image
+                    src={PopImage}
+                    alt="pop image"
+                    className="absolute top-[-10px] right-[-10px] w-12"
+                  />
+                </motion.strong>{" "}
+              </span>
               Finance
             </Title>
 
