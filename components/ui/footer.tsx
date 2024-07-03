@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-4">
           {renderFooterMenuLinks()}
-          <div className="blob w-[125px] md:w-[150px]">
+          <div className="blob w-[125px] md:w-[170px]">
             <Image src={LollipopDog} alt="Lollipop dog" width={150} />
           </div>
         </div>

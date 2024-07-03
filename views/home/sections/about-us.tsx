@@ -89,16 +89,16 @@ const AboutUs = () => {
               key={`about_us_${index}`}
               className={cn("py-8 group", item?.className)}
             >
-              <CardContent className="grid grid-cols-1 sm:grid-cols-[130px,1fr] gap-8 justify-center items-center pb-0">
-                <div className="justify-self-end lg:justify-self-auto">
+              <CardContent className="grid grid-cols-1 sm:grid-cols-[130px,1fr] md:gap-8 justify-center items-center pb-0">
+                <div className="justify-self-end sm:justify-self-center lg:justify-self-auto">
                   <Image
                     width={130}
                     src={item.image}
                     alt={item.title}
-                    className="group-hover:-translate-y-2 group-hover:rotate-6 transition-transform max-w-[50px] lg:max-w-[130px] w-full"
+                    className="group-hover:-translate-y-2 group-hover:rotate-6 transition-transform max-w-[50px] md:max-w-[130px] w-full"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 -translate-y-[30px] sm:translate-y-0">
                   <Title order={3}>{item.title}</Title>
                   <div>{item.description}</div>
                 </div>

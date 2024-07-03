@@ -33,7 +33,7 @@ const menuLinks: Menu[] = [
     href: "#team",
   },
   {
-    label: "Docs",
+    label: "Lollipop Docs",
     href: "https://lollipop-4.gitbook.io/lolli-docs",
   },
 ];
