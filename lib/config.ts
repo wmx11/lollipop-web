@@ -7,8 +7,10 @@ const config = {
   discord: "https://discord.gg/tPyV6yRnTu",
   twitter: "https://twitter.com/lollipopthedog",
   reddit: "#",
-  dexscreener: "#",
-  dextools: "#",
+  dexscreener:
+    "https://dexscreener.com/bsc/0x59aa666edbef6b00a1f8ff4d20cfce177213c566",
+  dextools:
+    "https://www.dextools.io/app/en/bnb/pair-explorer/0x59aa666edbef6b00a1f8ff4d20cfce177213c566?t=1720033791398",
   coingecko: "#",
   coinmarketcap: "#",
 };
