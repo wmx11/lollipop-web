@@ -48,7 +48,7 @@ const DesktopNavigation = () => {
           </Link>
         </div>
         <div>
-          <ul className="flex gap-6">{renderMenuLinks()}</ul>
+          <ul className="flex items-center gap-6">{renderMenuLinks()}</ul>
         </div>
         <div>
           <CTAButton size="sm" className={clsx(!isTop && "rounded-full")} />
@@ -78,17 +78,12 @@ const MobileNavigation = () => {
                 }
               }}
             >
-              <li className="border-b pb-2">
-                <Link href="/">
-                  {/* <Image src={Logo} alt="Modiggo logo" width={80} /> */}
-                </Link>
-              </li>
               {renderMenuLinks()}
-              <li className="border-t pt-2 [&>a]:w-full">
+              <li className="pt-2 [&>a]:w-full">
                 <CTAButton size="sm" className="rounded-full w-full" />
               </li>
-              <li className="border-t pt-2">
-                <div className="flex flex-wrap gap-4 w-full justify-center">
+              <li className="pt-2">
+                <div className="flex flex-wrap gap-4 w-full">
                   {socialLinks.map((props, index) => (
                     <AvatarWithTooltipLink
                       {...props}

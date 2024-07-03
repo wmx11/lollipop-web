@@ -14,7 +14,7 @@ const AvatarWithTooltipLink: FC<Props> = ({ href, image, tooltip }) => {
     <Tooltip>
       <TooltipTrigger>
         <Link href={href} target="_blank">
-          <Avatar>
+          <Avatar className="max-w-10">
             <AvatarImage src={image} />
           </Avatar>
         </Link>

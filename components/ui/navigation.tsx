@@ -1,3 +1,4 @@
+import config from "@/lib/config";
 import NavigationLink from "./navigation-link";
 import Title from "./title";
 
@@ -31,6 +32,10 @@ const menuLinks: Menu[] = [
     label: "Team",
     href: "#team",
   },
+  {
+    label: "Docs",
+    href: "https://lollipop-4.gitbook.io/lolli-docs",
+  },
 ];
 
 const footerMenuLinks: Menu[] = [
@@ -46,7 +51,7 @@ const footerMenuLinks: Menu[] = [
       items: [
         {
           label: "Lollipop Rush",
-          href: "#",
+          href: config.lollipopRush,
         },
       ],
     },

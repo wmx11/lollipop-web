@@ -28,11 +28,11 @@ const howToBuy = [
     title: "Add BNB network",
     description: (
       <p>
-        Lollipop 'lives' on the BNB Smart Chain. Add the BNB network to your
-        Metamask wallet by following the instructions{" "}
+        Lollipop 'lives' on the BNB Smart Chain. Add the BNB network to Metamask
+        wallet by following the instructions{" "}
         <a
           href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain"
-          className="break-all underline"
+          className="underline"
           target="_blank"
         >
           here
@@ -46,7 +46,7 @@ const howToBuy = [
     title: "Get some BNB tokens",
     description: (
       <p>
-        Fund your Metamask wallet with BNB by followig the instructios{" "}
+        Fund your Metamask wallet with BNB by following the instructions{" "}
         <a
           href="https://metamask.io/news/latest/how-to-use-metamasks-buy-feature-to-fund-your-wallet/"
           className="underline"

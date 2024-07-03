@@ -5,6 +5,7 @@ import PlayDogImage from "@/assets/play_dog.png";
 import StarsImage from "@/assets/stars.png";
 import SwapDogImage from "@/assets/swap_dog.png";
 import TaxDogImage from "@/assets/tax_dog.png";
+import AppStoreLogo from "@/assets/logos/app-store-logo.png";
 import AvatarWithTooltipLink from "@/components/ui/avatar-with-tooltip-link";
 import CTAButton from "@/components/ui/call-to-action-button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
@@ -16,6 +17,7 @@ import { socialLinks } from "@/lib/social-links";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import config from "@/lib/config";
 
 const features = [
   {
@@ -52,11 +54,22 @@ const features = [
     title: "Lollipop rush",
     image: PlayDogImage,
     description: (
-      <p>
-        Compete against other pups and win prizes! All revenue goes back into
-        Lollipop Finance. <br />
-        Download the latest version here.
-      </p>
+      <>
+        <p>
+          Compete against other pups and win prizes! All revenue goes back into
+          Lollipop Finance. <br />
+          Download the latest version{" "}
+          <a href={config.lollipopRush} className="underline" target="_blank">
+            here
+          </a>
+          .
+        </p>
+        <div>
+          <a href={config.lollipopRush} target="_blank">
+            <Image src={AppStoreLogo} alt="App store logo" width={130} />
+          </a>
+        </div>
+      </>
     ),
   },
 ];

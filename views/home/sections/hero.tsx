@@ -33,21 +33,23 @@ const Hero = () => {
             <Title
               className={`text-6xl md:text-8xl font-black ${font.className}`}
             >
-              Lolli
-              <motion.strong
-                className="text-primary uppercase relative rotate-12 inline-block "
-                initial="initial"
-                whileInView="visibleRotate"
-                viewport={{ once: true }}
-                variants={popInVariant}
-              >
-                <span className="z-10 text-[100px] md:text-[130px]">pop!</span>
-                <Image
-                  src={PopImage}
-                  alt="pop image"
-                  className="absolute top-[-10px] right-[-10px] w-12"
-                />
-              </motion.strong>{" "}
+              <span className="flex items-center">
+                Lolli
+                <motion.strong
+                  className="text-primary uppercase relative rotate-12 inline-block "
+                  initial="initial"
+                  whileInView="visibleRotate"
+                  viewport={{ once: true }}
+                  variants={popInVariant}
+                >
+                  <div className="z-10 text-[60px] md:text-[130px] -ml-3 md:ml-0">pop!</div>
+                  <Image
+                    src={PopImage}
+                    alt="pop image"
+                    className="absolute top-[-10px] right-[-10px] w-12"
+                  />
+                </motion.strong>{" "}
+              </span>
               Finance
             </Title>
 
