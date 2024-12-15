@@ -27,19 +27,20 @@ const DesktopNavigation = () => {
   return (
     <Container className="flex justify-center">
       <motion.div
-        className="flex items-center justify-between p-4 gap-4 backdrop-blur-sm rounded-full border border-transparent"
+        className="flex items-center justify-between py-8 gap-4 w-full flex-1"
         transition={{
-          duration: 0.25,
+          duration: 0.15,
           y: { duration: 1, type: "spring" },
         }}
-        initial={{ width: "100%" }}
         animate={{
-          width: isTop ? "100%" : "auto",
+          paddingTop: isTop ? "32px" : "16px",
+          paddingBottom: isTop ? "32px" : "16px",
+          paddingLeft: isTop ? "0" : "16px",
+          paddingRight: isTop ? "0" : "16px",
+          backdropFilter: isTop ? `blur(0px)` : `blur(5px)`,
+          background: isTop ? "transparent" : "#ffffff05",
+          borderRadius: isTop ? "0" : "8px",
           y: isTop ? 0 : [-200, 8],
-        }}
-        style={{
-          borderColor: isTop ? "transparent" : "#e4e4e7",
-          background: isTop ? "transparent" : "#ffffff50",
         }}
       >
         <div>
@@ -48,10 +49,10 @@ const DesktopNavigation = () => {
           </Link>
         </div>
         <div>
-          <ul className="flex items-center gap-6">{renderMenuLinks()}</ul>
+          <ul className="flex items-center gap-12">{renderMenuLinks()}</ul>
         </div>
         <div>
-          <CTAButton size="sm" className={clsx(!isTop && "rounded-full")} />
+          <CTAButton size="sm" />
         </div>
       </motion.div>
     </Container>
@@ -62,7 +63,7 @@ const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-row-reverse items-center justify-between px-4 py-2 mx-1 gap-4 bg-white/50 backdrop-blur-sm rounded-full border translate-y-1">
+    <div className="flex flex-row-reverse items-center justify-between px-4 py-2 mx-1 gap-4 bg-primary/20 backdrop-blur-sm rounded-md translate-y-1">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger>
           <MenuIcon />
@@ -80,13 +81,14 @@ const MobileNavigation = () => {
             >
               {renderMenuLinks()}
               <li className="pt-2 [&>a]:w-full">
-                <CTAButton size="sm" className="rounded-full w-full" />
+                <CTAButton size="sm" className="w-full" />
               </li>
               <li className="pt-2">
-                <div className="flex flex-wrap gap-4 w-full">
+                <div className="flex flex-wrap justify-between gap-4 w-full">
                   {socialLinks.map((props, index) => (
                     <AvatarWithTooltipLink
                       {...props}
+                      className="max-w-[49px] w-full h-[49px] border-none shadow-none overflow-visible"
                       key={`social_link_menu_${index}`}
                     />
                   ))}
@@ -97,7 +99,7 @@ const MobileNavigation = () => {
         </SheetContent>
       </Sheet>
       <div>
-        <CTAButton size="sm" className="rounded-full" />
+        <CTAButton size="sm" />
       </div>
     </div>
   );

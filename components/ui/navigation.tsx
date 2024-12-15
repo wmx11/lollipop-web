@@ -33,7 +33,7 @@ const menuLinks: Menu[] = [
     href: "#team",
   },
   {
-    label: "Lollipop Docs",
+    label: "Lolly Docs",
     href: "https://lollipop-4.gitbook.io/lolli-docs",
   },
 ];
@@ -41,16 +41,16 @@ const menuLinks: Menu[] = [
 const footerMenuLinks: Menu[] = [
   {
     group: {
-      label: "Lollipop",
+      label: "Lolly",
       items: menuLinks,
     },
   },
   {
     group: {
-      label: "Lollipop games",
+      label: "Lolly games",
       items: [
         {
-          label: "Lollipop Rush",
+          label: "Lolly Rush",
           href: config.lollipopRush,
         },
       ],

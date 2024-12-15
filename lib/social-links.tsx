@@ -1,11 +1,12 @@
 import CoingeckoLogo from "@/assets/logos/coingecko.webp";
 import DexscreenerLogo from "@/assets/logos/dexscreener.webp";
 import DextoolsLogo from "@/assets/logos/dextools.webp";
-import DiscordLogo from "@/assets/logos/discord.webp";
+import DiscordLogo from "@/assets/logos/discord.svg";
 import PancakeSwapLogo from "@/assets/logos/pancakeswap.webp";
-import TelegramLogo from "@/assets/logos/telegram.webp";
+import TelegramLogo from "@/assets/logos/telegram.svg";
 import TwitterLogo from "@/assets/logos/twitter.webp";
-import RedditLogo from "@/assets/logos/reddit.webp";
+import RedditLogo from "@/assets/logos/reddit.svg";
+import XLogo from "@/assets/logos/x.svg";
 import config from "./config";
 
 export const marketLinks = [
@@ -33,23 +34,23 @@ export const marketLinks = [
 
 export const socialLinks = [
   {
+    href: config.twitter,
+    icon: <XLogo />,
+    tooltip: "X",
+  },
+  {
     href: config.telegram,
-    image: TelegramLogo.src,
+    icon: <TelegramLogo />,
     tooltip: "Telegram",
   },
   {
     href: config.discord,
-    image: DiscordLogo.src,
+    icon: <DiscordLogo />,
     tooltip: "Discord",
   },
   {
-    href: config.twitter,
-    image: TwitterLogo.src,
-    tooltip: "Twitter",
-  },
-  {
     href: config.reddit,
-    image: RedditLogo.src,
+    icon: <RedditLogo />,
     tooltip: "Reddit",
   },
 ];

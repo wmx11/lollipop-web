@@ -16,7 +16,7 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
@@ -57,6 +57,12 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      boxShadow: {
+        DEFAULT: "0px 0px 10px hsl(var(--primary-foreground))",
+      },
+      dropShadow: {
+        DEFAULT: "0px 0px 10px hsl(var(--primary-foreground))",
       },
       borderRadius: {
         lg: "var(--radius)",

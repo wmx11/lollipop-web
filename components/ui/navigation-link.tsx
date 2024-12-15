@@ -31,7 +31,7 @@ export const NavigationLink: FC<Props> = ({ href, children, dark = false }) => {
         <span>{children}</span>
         <div
           className={cn(
-            "absolute bottom-0 group-hover:w-full scale-x-0 group-hover:scale-x-100 origin-left transition h-[2px] bg-foreground",
+            "absolute bottom-[-4px] group-hover:w-full scale-x-0 group-hover:scale-x-100 origin-left transition h-[2px] bg-primary shadow",
             dark && "bg-white"
           )}
         ></div>

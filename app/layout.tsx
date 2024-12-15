@@ -4,26 +4,26 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Balsamiq_Sans as FontSans } from "next/font/google";
+import { Unbounded as FontSans } from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "700"],
+  weight: ["200", "400", "700"],
 });
 
 export const metadata: Metadata = {
   title: {
-    template: "Lollipop Finance | %s",
-    default: "Lollipop Finance",
+    template: "Lolly Finance | %s",
+    default: "Lolly Finance",
   },
   description:
-    "Simplifying and sweetening your crypto journey! Lollipop is cultivating a community, demystifying DeFi and delivering delight.",
+    "Simplifying and sweetening your crypto journey! Lolly is cultivating a community, demystifying DeFi and delivering delight.",
   openGraph: {
-    title: "Lollipop Finance",
+    title: "Lolly Finance",
     description:
-      "Simplifying and sweetening your crypto journey! Lollipop is cultivating a community, demystifying DeFi and delivering delight.",
+      "Simplifying and sweetening your crypto journey! Lolly is cultivating a community, demystifying DeFi and delivering delight.",
     url: "https://lollipop.finance",
     images: "https://lollipop.finance/meta_image.png",
   },
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased bg-gradient-to-tr from-[#110037] to-[#09002B]",
           fontSans.variable
         )}
       >

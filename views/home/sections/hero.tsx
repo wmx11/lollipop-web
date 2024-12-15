@@ -1,22 +1,16 @@
 "use client";
-import ClickArrowImage from "@/assets/click-arrow.png";
-import LollipopDog from "@/assets/lollipop-dog.webp";
-import PopImage from "@/assets/pop.png";
-import SwirlImage from "@/assets/swirl.png";
+import BackgroundColor from "@/assets/background_color.png";
+import Illustration from "@/assets/illustration.png";
 import AvatarWithTooltipLink from "@/components/ui/avatar-with-tooltip-link";
-import { Badge } from "@/components/ui/badge";
-import CTAButton from "@/components/ui/call-to-action-button";
-import ClipboardButton from "@/components/ui/clipboard-button";
+import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
-import Title, { TitleGroup } from "@/components/ui/title";
-import { popInVariant } from "@/lib/animation-variants";
-import config from "@/lib/config";
-import { marketLinks, socialLinks } from "@/lib/social-links";
-import { motion } from "framer-motion";
-import { ReceiptText } from "lucide-react";
-import Image from "next/image";
+import Title from "@/components/ui/title";
+import { socialLinks } from "@/lib/social-links";
+import { ArrowRight } from "lucide-react";
 import { Luckiest_Guy as Font } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 
 const font = Font({
   subsets: ["latin"],
@@ -25,73 +19,74 @@ const font = Font({
 
 const Hero = () => {
   return (
-    <Section className="min-h-screen bg-pattern-bubbles flex items-center">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-      <Container className="grid grid-cols-1 md:grid-cols-2 gap-8 relative items-center">
+    <Section className="min-h-screen relative flex items-center">
+      <Container className="grid grid-cols-1 md:grid-cols-[420px_1fr_1fr] gap-8 relative z-10">
+        <div className="space-y-16 relative z-10 text-center md:text-left">
+          <Title className="text-6xl uppercase relative" order={1}>
+            <span>Simplifying</span>
+            <br />
+            <span>With</span>
+            <br />
+            <span className="bg-gradient-to-r from-primary to-white bg-clip-text text-transparent">
+              Lolly
+            </span>
+            <br />
+            <span>Finance</span>
+          </Title>
+          <div className="flex items-center justify-center">
+            <Link href="/#how-to-buy" className="flex gap-4 items-center">
+              <Button
+                size="icon"
+                className="shadow shadow-primary bg-gradient-to-r from-primary to-secondary text-white"
+              >
+                <ArrowRight />
+              </Button>
+              <span>Get started</span>
+            </Link>
+          </div>
+          <div>
+            <p>
+              Lolly is cultivating a community, <br /> demistifying DeFi <br />
+              and delivering delight. ____________________
+            </p>
+          </div>
+        </div>
         <div>
-          <TitleGroup className="space-y-4">
-            <Title
-              className={`text-6xl md:text-8xl font-black ${font.className}`}
-            >
-              <span className="flex items-center">
-                Lolli
-                <motion.strong
-                  className="text-primary uppercase relative rotate-12 inline-block "
-                  initial="initial"
-                  whileInView="visibleRotate"
-                  viewport={{ once: true }}
-                  variants={popInVariant}
-                >
-                  <div className="z-10 text-[60px] md:text-[130px] -ml-3 md:ml-0">pop!</div>
-                  <Image
-                    src={PopImage}
-                    alt="pop image"
-                    className="absolute top-[-10px] right-[-10px] w-12"
-                  />
-                </motion.strong>{" "}
-              </span>
-              Finance
-            </Title>
+          <div className="w-12 h-12 bg-white/30 blur-xl absolute top-[-20px] right-[50%]"></div>
 
-            <Title order={2} className="max-w-content !mb-4">
-              Simplifying and sweetening your crypto journey! <br />
-              Lollipop is cultivating a community, demystifying DeFi and
-              delivering delight.
-            </Title>
+          <Image
+            src={Illustration}
+            alt="Lolly illustration"
+            className="absolute max-w-[800px] w-full top-0 right-[45px] z-0 opacity-30 md:opacity-100"
+          />
+        </div>
 
-            <Badge variant="outline">
-              <ReceiptText className="w-3 h-3 mr-3" />
-              <span className="uppercase text-lg break-all">
-                {config.contractAddress}
-              </span>
-              <ClipboardButton className="ml-3" copy={config.contractAddress} />
-            </Badge>
-          </TitleGroup>
-          <div className="flex flex-wrap gap-4 w-full">
-            {[...marketLinks, ...socialLinks].map((props, index) => (
-              <AvatarWithTooltipLink {...props} key={`hero_link_${index}`} />
+        <div className="space-y-6 flex flex-col items-end justify-end">
+          <div className="md:space-y-6 flex md:block items-center justify-between w-full md:w-auto">
+            {socialLinks.map((props, index) => (
+              <div key={`hero_link_${index}`}>
+                <AvatarWithTooltipLink
+                  className="max-w-[49px] w-full h-[49px] border-none shadow-none overflow-visible"
+                  {...props}
+                />
+              </div>
             ))}
-            <div className="relative">
-              <Image
-                src={ClickArrowImage}
-                alt="pop image"
-                className="absolute top-[-35px] right-[-15px] w-12 rotate-45"
-              />
-              <CTAButton size="lg" />
-            </div>
           </div>
+          <p className="text-right">
+            Sweetening <br /> your crypto journey!
+          </p>
         </div>
-        <div>
-          <div className="blob relative flex items-center justify-center">
-            <Image src={LollipopDog} alt="Lollipop dog" className="z-10" />
-            <Image
-              src={SwirlImage}
-              alt="Swirl image"
-              className="absolute top-0 left-[-15px] w-16"
-            />
-          </div>
-        </div>
+        <div className="w-20 h-20 bg-white/50 blur-xl absolute top-[-20px] left-0"></div>
+        <div className="w-20 h-20 bg-white/50 blur-xl absolute bottom-[-20px] left-20"></div>
+        <div className="w-20 h-20 bg-white/50 blur-xl absolute bottom-[-20px] right-80"></div>
+        <div className="w-12 h-12 bg-white/50 blur-xl absolute bottom-40 right-0"></div>
       </Container>
+      <Image
+        src={BackgroundColor}
+        alt="Background illustration"
+        className="absolute inset-0 w-full z-[-1px]"
+      />
+      <div className="w-12 h-12 bg-white/30 blur-xl absolute top-[24px] left-[34%]"></div>
     </Section>
   );
 };
